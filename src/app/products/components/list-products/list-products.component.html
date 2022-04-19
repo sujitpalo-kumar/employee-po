@@ -1,0 +1,45 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col animated zoomIn">
+      <p class="h3 text-success">Products List</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem commodi dolor dolorem dolores, et, exercitationem, expedita hic illo laboriosam modi molestiae nemo officiis placeat quasi reprehenderit voluptas? Eveniet, nostrum.</p>
+    </div>
+  </div>
+  <div class="row mt-3" *ngIf="products.length > 0">
+    <div *ngFor="let product of products" class="col-md-3">
+      <div class="card animated flipInY delay-1s">
+        <div class="card-header text-center bg-white">
+          <img [src]="product.image" alt="" class="" width="150" height="150">
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              jobtitle: {{product.jobtitlename}}
+            </li>
+            <li class="list-group-item">
+             first name : {{product.firstname}}
+            </li>
+            <li class="list-group-item">
+              last name : {{product.lastname}}
+            </li>
+            <li class="list-group-item">
+              location : {{product.location}}
+            </li>
+            <li class="list-group-item">
+              ph no : {{product.phno}}
+            </li>
+            <li class="list-group-item">
+              email : {{product.email}}
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3" *ngIf="products.length === 0">
+    <div class="col">
+      <p class="h6 text-danger font-weight-bold text-center">--------------- No Products Found ------------- </p>
+    </div>
+  </div>
+</div>

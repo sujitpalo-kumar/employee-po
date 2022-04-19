@@ -1,0 +1,73 @@
+<div class="container mt-3">
+  <div class="row animated zoomInLeft">
+    <div class="col">
+      <p class="h3 text-success">Create New Product</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem commodi dolor dolorem dolores, et, exercitationem, expedita hic illo laboriosam modi molestiae nemo officiis placeat quasi reprehenderit voluptas? Eveniet, nostrum.</p>
+    </div>
+  </div>
+  <!--<pre>{{product | json}}</pre>-->
+  <div class="row">
+    <div class="col-md-5 animated zoomInUp delay-1s">
+      <!-- Empty form Data -->
+      <div *ngIf="emptyFields" class="alert alert-danger alert-dismissible animated zoomIn">
+        <button class="close" data-dismiss="alert">
+          <i class="fa fa-times-circle"></i>
+        </button>
+        <span class="font-weight-bold">Please fill in the Fields</span>
+      </div>
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <p class="h4">Create Product</p>
+        </div>
+        <div class="card-body bg-light">
+          <form (submit)="submitCreateProduct()">
+            <div class="form-group">
+              <input
+                required="true"
+                name="jobtitle"
+                [(ngModel)]="product.jobtitlename"
+                type="text" class="form-control" placeholder="jobtitle">
+            </div>
+            
+            <div class="form-group">
+              <input
+                required
+                name="firstname"
+                [(ngModel)]="product.firstname"
+                type="text" class="form-control" placeholder="first name">
+            </div>
+            <div class="form-group">
+              <input
+                required
+                name="lastname"
+                [(ngModel)]="product.lastname"
+                type="text" class="form-control" placeholder="lastname">
+            </div>
+            <div class="form-group">
+              <input
+                required
+                name="ph no"
+                [(ngModel)]="product.phno"
+                type="text" class="form-control" placeholder="phone number">
+            </div>
+            <div class="form-group">
+              <input
+                required
+                name="email"
+                [(ngModel)]="product.email"
+                type="email" class="form-control" placeholder="email">
+            </div>
+           
+           
+           
+           
+            <div>
+              <input type="submit" class="btn btn-success btn-sm" value="Create">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom: 200px"></div>
+</div>

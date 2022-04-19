@@ -1,0 +1,54 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col animated zoomIn">
+      <p class="h3 text-success">Employee Admin Portal</p>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem commodi dolor dolorem dolores, et, exercitationem, expedita hic illo laboriosam modi molestiae nemo officiis placeat quasi reprehenderit voluptas? Eveniet, nostrum.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col animated zoomIn">
+      <a routerLink="/products/create-product" class="btn btn-success btn-sm">Create Employee</a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col animated zoomInUp delay-1s">
+      <table class="table table-hover table-success table-striped text-center">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>id</th>
+            <th>job title</th>
+            <th>First Name</th>
+            <th>last name</th>
+            <th>location</th>
+            <th>ph no</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="products.length > 0">
+          <tr *ngFor="let product of products">
+            <td>{{product._id.substr(product._id.length - 5)}}</td>
+            <td>
+              {{product.jobtitle}}
+            </td>
+            <td>{{product.firstname}}</td>
+            <td>{{product.lastname | currency : 'INR'}}</td>
+            <td>{{product.location}} Kgs</td>
+            <td>{{product.phno}}</td>
+            <td>{{product.email}}</td>
+            <td>
+              <a routerLink="/products/{{product._id}}" class="btn btn-secondary btn-sm text-white">Update</a>
+              <button (click)="clickDeleteProduct(product._id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody *ngIf="products.length === 0">
+          <tr>
+            <td colspan="6" class="text-danger font-weight-bold">
+              ----------------- No Products Found -----------
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

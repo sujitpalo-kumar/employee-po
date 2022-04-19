@@ -24,9 +24,18 @@
               "src/assets"
             ],
             "styles": [
+              "src/bootstrap/css/font-awesome-5.8.1.css",
+              "src/bootstrap/css/bootstrap.css",
+              "src/bootstrap/css/mdb.css",
+              "src/bootstrap/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/bootstrap/js/jquery-3.3.1.min.js",
+              "src/bootstrap/js/popper.min.js",
+              "src/bootstrap/js/bootstrap.js",
+              "src/bootstrap/js/mdb.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "first-app"
+    }
+  },
+  "defaultProject": "first-app",
+  "cli": {
+    "analytics": "f098dd37-fa83-4ee0-bbe9-29d95286a379"
+  }
 }

@@ -1,0 +1,67 @@
+Bigbasket Application : FullStack Application (MEAN) (CRUD)
+-----------------------------------------------------------
+Server Side Setup (Express JS & Mongo DB)
+-----------------
+express , mongoose , cors , dotenv
+
+npm install express mongoose cors dotenv
+
+REST API Configuration (productRouter)
+----------------------
+1) GET All Product
+
+	URL : http://127.0.0.1:5000/api/products/
+	METHOD : GET
+	Fields : no-fields
+	express function : router.get();
+
+2) GET a single Product
+
+	URL : http://127.0.0.1:5000/api/products/:id
+	METHOD : GET
+	Fields : no-fields
+	express function : router.get();
+
+3) Create a Product
+
+	URL : http://127.0.0.1:5000/api/products/
+	METHOD : POST
+	Fields : name , image , price , qty , info
+	express function : router.post();
+
+4) Update a Product
+
+	URL : http://127.0.0.1:5000/api/products/:id
+	METHOD : PUT
+	Fields : name , image , price , qty , info
+	express function : router.put();
+
+5) Delete a Product
+
+	URL : http://127.0.0.1:5000/api/products/:id
+	METHOD : DELETE
+	Fields : no-fields
+	express function : router.delete();
+
+Database Configuration
+----------------------
+Database : big-basket-angular
+Table : products
+Fileds : name : string ,
+		image :string ,
+		price : number,
+		qty : number,
+		info : string,
+		created : date
+
+
+Create : insertOne() -> save()
+READ : find() -> find()
+Update : updateOne() -> findByIdAndUpdate()
+Delete : deleteOne() -> findByIdAndDelete()
+
+
+
+
+
+
